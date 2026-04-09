@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: linear-gradient(to bottom, #f8fafc, #eaf2ff);
+  color: #0f172a;
+}
+
+::selection {
+  @apply bg-blue-100 text-slate-900;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-content px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-16 sm:py-20;
+  }
+
+  .card-base {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-soft transition hover:shadow-md;
+  }
+
+  .nav-link {
+    @apply text-base font-bold text-slate-700 transition duration-200 hover:text-blue-700 hover:underline underline-offset-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-navy px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-blue-700;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-blue-200 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition hover:-translate-y-0.5 hover:bg-blue-50 hover:text-blue-700;
+  }
+
+  .soft-blue-section {
+    background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+  }
+
+  .soft-teal-section {
+    background: linear-gradient(135deg, #ccfbf1 0%, #f0fdfa 100%);
+  }
+
+  .soft-amber-section {
+    background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%);
+  }
+
+  .badge-blue {
+    @apply inline-flex rounded-full bg-blue-200 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-blue-900;
+  }
+
+  .badge-teal {
+    @apply inline-flex rounded-full bg-teal-200 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-teal-900;
+  }
+
+  .badge-amber {
+    @apply inline-flex rounded-full bg-amber-200 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-amber-900;
+  }
+}
